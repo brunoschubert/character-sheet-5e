@@ -1,5 +1,60 @@
 <template>
-  <v-app id="app"></v-app>
+  <v-app id="app" class="window">
+    <v-container grid-list-lg fluid>
+      <v-layout fill-height align-center justify-center row wrap>
+        <!-- LEFT ROW -->
+        <v-flex d-flex xs3 fill-height>
+          <v-layout row wrap>
+            <!-- Character Header -->
+            <v-flex d-flex xs12>
+              <v-card color="white"></v-card>
+              <!-- component -->
+            </v-flex>
+            <!-- Saves -->
+            <v-flex d-flex xs12>
+              <v-card color="white"></v-card>
+              <!-- component -->
+            </v-flex>
+            <!-- Proficiencies -->
+            <v-flex d-flex xs12>
+              <v-card color="white"></v-card>
+              <!-- component -->
+            </v-flex>
+          </v-layout>
+        </v-flex>
+        <!-- RIGHT ROW -->
+        <v-flex d-flex xs9 fill-height>
+          <v-layout row wrap>
+            <!-- Attributes -->
+            <v-flex d-flex xs12 fill-height class="attributes">
+              <v-card color="white"></v-card>
+              <!-- component -->
+            </v-flex>
+            <!-- Skills -->
+            <v-flex d-flex xs3 fill-height class="skill">
+              <v-card color="white"></v-card>
+              <!-- component -->
+            </v-flex>
+            <!-- INNER RIGHT ROW -->
+            <v-flex d-flex xs9>
+              <v-layout column wrap>
+                <!-- Combat Stats-->
+                <v-flex d-flex xs8 fill-height class="stats">
+                  <v-card color="white"></v-card>
+                  <!-- component -->
+                </v-flex>
+                <!-- Feats -->
+                <v-flex d-flex xs8 class="feats" fill-height>
+                  <v-card color="white"></v-card>
+                  <!-- component -->
+                </v-flex>
+              </v-layout>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-app>
 </template>
 
 <script>
@@ -12,3 +67,23 @@ export default {
   }
 };
 </script>
+
+<style>
+.window {
+  max-height: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.attributes {
+  max-height: 20%;
+}
+.skill {
+  max-height: 80%;
+}
+.stats {
+  max-height: 45%;
+}
+.feats {
+  max-height: 55%;
+}
+</style>
